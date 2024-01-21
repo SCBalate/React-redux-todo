@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import {
   addTodos,
@@ -27,15 +27,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const DisplayTodos = (props) => {
-  const { initializeTodos } = props;
-
   const [sort, setSort] = useState("all");
-
-  useEffect(() => {
-    // Initialize todos from localStorage on component mount
-    const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    initializeTodos(storedTodos);
-  }, [initializeTodos]);
 
   return (
     <div className="displaytodos">

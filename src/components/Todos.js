@@ -98,25 +98,6 @@ const Todos = (props) => {
       )}
 
       <br />
-
-      {/* <ul>
-        {props.todos.map((item) => (
-          <li key={item.id}>
-            <span
-              style={{
-                textDecoration: item.completed ? "line-through" : "none",
-              }}
-            >
-              {item.item}
-            </span>
-            <button onClick={() => complete(item.id)}>Complete</button>
-            <button onClick={() => edit(item.id, item.item)}>Edit</button>
-            <button onClick={() => remove(item.id)}>
-              <BsTrash />
-            </button>
-          </li>
-        ))}
-      </ul> */}
     </div>
   );
 };
